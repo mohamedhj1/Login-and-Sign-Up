@@ -1,0 +1,220 @@
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --selection-bk-color: #DF2C21;
+    --selection-color: white;
+    --text-color-hover: #DF2C21;
+    --text-color-focus: #DF2C21;
+    --border-focus: #DF2C21;
+    --caret-color: #DF2C21;
+    --boder: #fff;
+    --color-text: #fff;
+    --backdrop-filter: blur(15px);
+}
+
+::selection{
+    background-color: var(--selection-bk-color) !important;
+    color: var(--selection-color) !important;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(image/image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.h1{
+    background-image: linear-gradient(to bottom, #df2b213b 40%, transparent);
+    backdrop-filter: var(--backdrop-filter);
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+    font-size: 0.8rem;
+    border-bottom: 0;
+    color: var(--color-text);
+}
+
+.login{
+    position: relative;
+    background-image: linear-gradient(to bottom, #df2b213b 60%, transparent);
+    backdrop-filter: var(--backdrop-filter);
+    width: 800px;
+    color: var(--color-text);
+    padding: 60px 40px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.login .input-box{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    background-color: transparent;
+    border: 1.5px solid white;
+    padding: 0 20px;
+    border-radius: 50px;
+    color: var(--color-text);
+    font-size: 1rem;
+    caret-color: var(--caret-color);
+}
+
+input:focus{
+    border: 2px solid var(--border-focus);
+    box-shadow: 0 3px 2px #DF2C21;
+    color: var(--text-color-focus);
+}
+
+
+::placeholder{
+    color: var(--color-text);
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+:focus::placeholder{
+    color: #DF2C21;
+}
+
+.login .forgit{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.login .btn{
+    width: 100%;
+    height: 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 2px solid white;
+    background-color: transparent;
+    border-radius: 50px;
+    color: var(--color-text);
+    transition: 0.5s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.btn:hover{
+    border: none;
+    background-color: #DF2C21;
+    color: var(--color-text);
+}
+
+.login .sign-up{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #DF2C21; 
+}
+
+/* Media Queries */
+
+/* للأجهزة المحمولة */
+@media (max-width: 480px) {
+
+    .h1{
+        width: 40%;
+        font-size: 0.7rem;
+    }
+
+    .login{
+        width: 90%;
+        padding: 50px 20px;
+    }
+
+    .login input{
+        font-size: 1rem;
+    }
+
+    ::placeholder{
+        font-size: 0.8rem;
+        opacity: 0.9;
+        font-weight: bold;
+    }
+    
+    .login .forgit{
+        font-size: 1rem;
+    }
+
+    .login .btn{
+        font-size: 1rem;
+        height: 45px;
+    }
+
+    .login .sign-up{
+        font-size: 1rem;
+    }
+    
+    }
+
+/* للأجهزة اللوحية */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .h1{
+        width: 20%;
+        font-size: 0.7rem;
+    }
+
+    .login{
+        width: 70%;
+        padding: 60px 40px;
+    }
+
+    .login input{
+        font-size: 1rem;
+    }
+
+    ::placeholder{
+        font-size: 0.9rem;
+        opacity: 0.9;
+        font-weight: bold;
+    }
+    
+    .login .forgit{
+        font-size: 1rem;
+    }
+
+    .login .btn{
+        font-size: 1rem;
+        height: 45px;
+    }
+
+    .login .sign-up{
+        font-size: 1rem;
+    }
+    
+    }
+    
